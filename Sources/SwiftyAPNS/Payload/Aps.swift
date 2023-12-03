@@ -11,6 +11,29 @@
 /// - a number to badge the app icon with
 /// - a sound to play
 public struct APS: Encodable {
+
+    public init(alert: APSAlert? = nil, 
+                badge: Int? = nil, 
+                sound: APSSound? = nil, 
+                contentAvailable: Int? = nil, 
+                mutableContent: Int? = nil, 
+                category: String? = nil, 
+                threadId: String? = nil,
+                targetContentId: String? = nil,
+                interruptionLevel: APSInterruptionLevel? = nil,
+                relevanceScore: Double? = nil) {
+                    self.alert = alert
+                    self.badge = badge
+                    self.sound = sound
+                    self.contentAvailable = contentAvailable
+                    self.mutableContent = mutableContent
+                    self.category = category
+                    self.threadId = threadId
+                    self.targetContentId = targetContentId
+                    self.interruptionLevel = interruptionLevel
+                    self.relevanceScore = relevanceScore
+    }
+
     /// If this property is included, the system displays a standard alert or a banner,
     /// based on the user’s setting.
     public var alert: APSAlert?
